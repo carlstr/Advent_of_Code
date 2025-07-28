@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . '/vendor/autoload.php';
+require '../../vendor/autoload.php';
 
 $day = $argv[1];
 $part = $argv[2];
@@ -9,11 +9,11 @@ if (empty($day) || empty($part)) {
     exit();
 }
 
-$input = file_get_contents(__DIR__ . "/src/day{$day}_input.txt");
-$className = "Advent_Of_Code\\Day$day";
+$input = file_get_contents(__DIR__ . "/day{$day}_input.txt");
+$className = "Advent_Of_Code\\day$day\\Day$day";
 
 $solution = new $className();
 $method = "solvePart$part";
 
 $result = $solution->$method($input);
-echo "Day $day, Part $part: $result\n";
+echo "\nDay $day, Part $part: $result\n";

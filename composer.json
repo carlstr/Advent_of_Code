@@ -1,0 +1,9 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Advent_Of_Code\\": "src/"
+        }
+    },
+    "type": "project",
+    "require": {}
+}
